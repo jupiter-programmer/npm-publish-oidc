@@ -2,6 +2,41 @@
 
 A GitHub Actions workflow for securely publishing npm packages using **OIDC Trusted Publishing**.
 
+## Folder Structure
+
+```text
+npm-package/
+│
+├── .github/
+│   └── workflows/
+│       └── publish.yml
+│
+├── src/
+│   └── ...
+│
+├── tests/
+│   └── ...
+│
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── README.md
+└── LICENSE
+```
+    
+```text
+.github/workflows/publish.yml
+```
+
+GitHub Actions workflow for automatically:
+
+- Installing dependencies
+- Running tests
+- Building the package
+- Publishing the package to npm using **OIDC Trusted Publishing**
+
+The workflow runs automatically when a version tag such as `v1.0.2` is pushed.
+
 ## Publish a New Version
 
 ### 1. Commit Your Changes
